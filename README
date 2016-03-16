@@ -1,0 +1,28 @@
+a simple file manager
+
+
+ultimately these are the design goals
+
+* markup should be simple enough over
+  the wire that you can use a `curl` interface
+* a very thin css and js layer on top
+* minimal ajax for speediness with even
+  smaller over-the-wire footprint
+
+
+it should be able to do these things with all files
+
+* open
+* delete
+* rename
+* move
+* copy
+* share (like file.io)
+
+
+in addition, these things should be baked in
+
+* search
+* tags
+* filter by name
+* image preview (if tagged)
