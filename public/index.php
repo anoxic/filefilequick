@@ -11,7 +11,13 @@ case "/c":
     echo "$route to be implemented";
     break;
 default:
-    if ($target && is_dir($d="$dir$target/")) {
+    $is_dir = is_dir("$dir$target/");
+    if ($target && !$is_dir) {
+        echo "not able to display file <address>$target</address>";
+        echo "<a href=../" . dirname($target) . "/>..</a>";
+        break;
+    }
+    if ($target && $is_dir) {
         $dir = "$dir$target/";
         echo "<img src={$prefix}dir.gif width=18> ";
         echo "<a href=../>..</a><br>\n";
