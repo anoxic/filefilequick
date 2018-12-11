@@ -1,5 +1,6 @@
 <?php
 
+$target = urldecode($target);
 $is_dir = is_dir("$dir$target/");
 
 if ($target && !$is_dir) {
