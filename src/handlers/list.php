@@ -4,8 +4,8 @@ $target = urldecode($target);
 $is_dir = is_dir("$dir$target/");
 
 if ($target && !$is_dir) {
-    echo "not able to display file <address>$target</address>";
-    echo "<a href=../" . dirname($target) . "/>..</a>";
+    echo "not able to display file <i>$target</i><br>";
+    echo "<a href=.>back</a>";
     break;
 }
 
