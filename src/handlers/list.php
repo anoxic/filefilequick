@@ -22,6 +22,7 @@ foreach ($files as $f) {
     $icon = $prefix . (is_dir($f) ? 'dir.gif' : 'file.gif');
     if (is_dir($f)) $f .= "/";
     $f = substr($f,strlen($dir));
+    $h = url($f);
     echo "<img src=$icon width=18> ";
-    echo "<a href=$f title={$filesize}kb>$f</a><br>\n";
+    echo "<a href=$h title={$filesize}kb>$f</a><br>\n";
 }
