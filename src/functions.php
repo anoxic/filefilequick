@@ -17,3 +17,8 @@ function dispatch($routes, $uri, $prefix)
     return [$r, substr($uri, strlen($prefix),
         $routes->valid() ? -strlen($r) : strlen($uri))];
 }
+
+function url($u)
+{
+    return str_replace('%2F','/',urlencode($u));
+}
